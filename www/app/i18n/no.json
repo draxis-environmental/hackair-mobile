@@ -1,0 +1,251 @@
+{
+  "general":{
+      "settings":"Innstillinger",
+      "install_cots_sensors":"Installer hackAIR-kartong-sensorer",
+      "install_hackair_cardboard_sensors": "Installer hackAIR-kartong-sensorer",
+      "add_sensor_measurement":"Legg til en sensormåling",
+      "invite_friends":"Inviter en venn",
+      "about":"Om",
+      "logout":"Logg ut",
+      "edit":"Rediger",
+      "yes":"Ja",
+      "no":"Nei",
+      "back": "tilbake",
+      "submit":"Send inn",
+      "cancel":"SLETT",
+      "save":"LAGRE",
+      "social": "Sosial",
+      "create": "Opprett",
+      "update": "Oppdater"
+  },
+  "sections":{
+      "perception":"Oppfatning av luftkvalitet",
+      "profile":"Min profil",
+      "edit_my_profile":"Rediger min profil",
+      "my_sensors":"Mine sensorer",
+      "my_achievements":"Mine prestasjoner",
+      "edit_sensor":"Rediger sensor",
+      "air_quality_history":"Historiske luftkvalitetsverdier",
+      "my_photos":"Mine bilder",
+      "my_followers":"Følgere",
+      "following":"Følger"
+  },
+  "intro":{
+      "skip":"Hopp over",
+      "welcome_heading":"Kollektiv bevissthet om luftkvalitet",
+      "step2_heading":"LUFTKVALITETSINFORMASJON",
+      "step2_info":"Visste du at 90% av innbyggerne i Europas byer er utsatt for luftforurensningsnivåer som kan skade menneskers helse? Mer kunnskap om luftkvalitet er første steg mot forbedring",
+      "air_quality":{
+          "air_quality_is":"Luftkvaliteten er",
+          "register_for_personalized_info":"Registrer deg for å få persontilpasset informasjon om luftkvaliteten på de stedene du frekventerer",
+          "no_data_found":"Ingen luftkvalitetsinformasjon funnet",
+          "register_to_measure_and_contribute":"Registrer deg for å måle og bidra til bedre luftkvalitet på de stedene du frekventerer"
+      }
+  },
+  "auth":{
+      "login":"Logg på",
+      "register":"Registrer deg",
+      "reset": "Tilbakestill",
+      "email":"E-post",
+      "email_required":"Du mangler e-postadresse",
+      "email_min_length":"E-postadressen din er for kort",
+      "email_max_length":"E-postadressen din er for lang",
+      "email_invalid":"E-postadressen din er ikke gyldig",
+      "password":"Passord",
+      "password_required":"Du har ikke oppgitt et passord",
+      "password_min_length":"Passordet ditt er for kort",
+      "password_max_length":"Passordet ditt er for langt",
+      "forgot_password":"Har du glemt passordet ditt?",
+      "repeat_password":"Gjenta passordet ditt",
+      "repeat_password_required":"Du har ikke gjentatt passordet ditt",
+      "repeat_password_min_length":"Det gjentatte passordet er for kort",
+      "repeat_password_no_match":"Passordene er ikke like",
+      "username": "Caution: Your username will be public. Consider not including personal information",
+      "username_required":"Du mangler fortsatt et brukernavn",
+      "username_min_length":"Brukernavnet ditt er for kort",
+      "username_max_length":"Brukernavnet ditt er for langt",
+      "terms_of_service_1": "Ved å registrere deg på hackAIR sier du deg enig i våre",
+      "terms_of_service_2": "vilkår for bruk.",
+      "i_want_to_receive_newsletters": "I want to receive newsletters"
+  },
+
+  "photos": {
+    "my_photos_heading": "My photos",
+    "public_photos_heading": "photos",
+    "photos_marked_with_a": "Photos marked with a",
+    "were_used_by_hackAIR": "were used by hackAIR.",
+    "come_from_cardboard_sensors": "come from Cardboard Sensors.",
+    "loading_please_wait": "loading...please wait",
+    "Air_quality_is": "Air quality is",
+    "very_good": "very good",
+    "good": "good",
+    "medium": "medium",
+    "bad": "bad",
+    "the_photo_does_not_contain_usable_sky" : "The photo does not contain usable sky.",
+    "NOT_AVAILABLE" : "not available for photos with non-usable sky"          
+  },
+  
+  "photo":{
+      "photos_marked_with":"Bilder som er merked med",
+      "choose_a_sensor":"Velg en sensor",
+      "were_used":"har blitt brukt av hackAIR",
+      "take_a_sky_photo":"Ta et bilde av himmelen",
+      "take_a_cots_sensor_photo":"Ta et bilde av hackAIR-kartongen",
+      "uploading":"Laster opp",
+      "retake":"Ta bildet på nytt",
+      "upload":"Last opp",
+      "how_to_1":"En del av bildet bør vise himmelen.",
+      "how_to_2":"Sola bør ikke synes på bildet",
+      "how_to_3":"Bildet bør ikke tas i nærheten av soloppgang eller -nedgang",
+      "how_to_4":"Kameraet bør ikke holdes for skrått",
+      "how_to_5":"Ta et bilde og klikk på send inn",
+      "got_it":"OK, jeg har forstått!",
+      "take_a_photo_heading": "Ta et bilde",
+      "cots_how_to_1": "Retrieve the hackAIR cardboard sensor, without damaging the petroleum jelly layer.",
+      "cots_how_to_2": "Place it on a flat surface, for instance a table or a desk.",
+      "cots_how_to_3": "Use a macro lens and adjust it to the cell phone's camera.", 
+      "cots_how_to_4": "Place the cell phone, with the adjusted camera, above the two dots.",
+      "cots_how_to_5": "Focus the camera sensor at the dots or wait until it auto-focused.",
+      "cots_how_to_6": "Take a photo and upload it to the hackAIR app."       
+  },
+  "profile":{
+      "level":"Nivå",
+      "my_profile":"Min profil",
+      "secondary_profile":"Tilleggsprofil",
+      "change_password": "Endre passord",
+      "delete_account": "Slett din konto",
+      "achievements":"Prestasjoner",
+      "sensors":"Sensorer",
+      "following":"Følger",
+      "photos":"Bilder",
+      "followers":"Følgere",
+      "my_communities":"Mine nettsamfunn",
+      "make_my_profile_public":"Gjør profilen min synlig for andre (?)",
+      "what_does_this_mean":"Hva betyr det?",
+      "personal_info":"Personlig informasjon",
+
+      "want_secondary_profile": "Jeg ønsker en tilleggsprofil",
+      "secondary_profile_info": "Informasjon om tilleggsprofil",
+
+      "name":"Navn",
+      "surname":"Etternavn",
+      "location":"Sted",
+      "year_of_birth":"Fødselsår",
+      "age":"Alder",
+      "groups":"Grupper",
+      "gender":"Kjønn",
+      "language": "Language",
+      "sensitivities":"Dette er jeg spesielt sensitiv for",
+      "outdoor_activities":"Utendørsaktiviteter",
+      "sensitivities_display_text": "Sensitivities",
+      "outdoor_activities_display_text": "Outdoor activities",       
+      "outdoor_job":"utendørs arbeid",
+      "disclaimer": "Disse anbefalingene utgjør ikke en medisinsk anbefaling. Bruk dem kun til informasjonsformål.",
+      "location_placeholder": "By",
+      "settings": "Edit Settings",
+
+      "edit_settings": {
+        "edit_settings_heading": "Edit your settings",
+        "notification_settings_heading": "Notification settings",
+        "newsletter_settings_heading": "Newsletter settings",
+        "i_want_to_receive_notification_emails": "I want to receive notification emails",
+        "i_want_to_receive_newsletters": "I want to receive newsletters"
+      },          
+      "edit_password": {
+          "change_your_password_heading": "Endre passordet ditt",
+          "current_password": "Nåværende passord",
+          "new_password": "Nytt passord",
+          "repeat_new_password": "Gjenta nytt passord",
+          "change_button": "Endre"
+      },
+      "delete_account": {
+          "delete_account_heading": "Slett din konto",
+          "write_hackair": "Vennligst tast inn 'hackAIR'",
+          "disclaimer": "Din konto deaktiveres. Den vil bli slettet etter 30 dager. I tilfelle du vil opprette din konto igjen innen denne perioden, vennligst ta kontakt!",
+          "delete_button": "Slett"
+      }
+  },
+  "follows":{
+      "list_of_users_followers":"Disse brukerne følger deg",
+      "list_of_users_following":"Disse brukerne følger du",
+      "unfollow":"SLUTT Å FØLGE",
+      "follow":"FØLGER"
+  },
+  "sensor":{
+      "name": "Sensor-navn",
+      "view":"Se sensor",
+      "edit":"Rediger sensor",
+      "type":"Type sensor",
+      "access_key":"Tilgangskode",
+      "mac_address":"MAC-adresse",
+      "floor":"Etasje",
+      "sensor_measurements_heading":"Sensormålinger",
+      "locationType": "Stedstype",
+      "sensor_location_title": "Sensorplassering"
+  },
+  "air_quality":{
+      "perception_heading":"Hvordan opplever du luftkvaliteten i dag?",
+      "air_quality_is":"Luftkvaliteten er",
+      "bad":"dårlig",
+      "medium":"middels",
+      "good":"bra",
+      "perfect":"veldig bra",
+      "very good": "veldig bra",
+      "very_good": "veldig bra",
+      "excellent":"veldig bra",
+      "history":"Historie",
+      "share":"Del",
+      "disclaimers": {
+        "disclaimer_measurements": "Denne indeksen er kun en kvalitativ representasjon av luftkvaliteten og er fortsatt i et eksperimentelt stadium. Rapporter, studier og andre vitenskapelige utredninger bør kun gjennomføres ved å bruke etablerte målemetodikker.",
+        "disclaimer_recommendations": "Disse anbefalingene utgjør ikke en medisinsk anbefaling. Bruk dem kun til informasjonsformål.",
+        "disclaimer_quality_history":"Denne indeksen har blitt beregnet fra alle tilgjengelige datakilder for bysenteret.",
+        "disclaimer_unsupportedcity": "Currently we do not estimate the air quality index for this city. You can though check the map for other users' contributions and upload your own measurements!"
+      },
+      "from": "fra",
+      "to": "til"
+  },
+  "sensors":{
+      "add_new":"Legg til ny sensor",
+      "send_measurement": "Send hackAIRs mobile målinger",
+      "monitor": "Sensor overvåkning",
+      "scanning": "Skanner...",
+      "total_measurements_sent": "TAntall målinger som har blitt sendt:",
+      "latest_measurements": "LSiste målinger:",
+      "PM2_5_pollutant": "PM2.5 luftforurensningsverdi:",
+      "PM10_pollutant": "PM10 luftforurensningsverdi:",
+      "time_disclaimer": "Kun én måling per minutt. Vent for å se neste målingen.",
+      "stop_sending": "Stopper å sende målinger"
+  },
+  "communities":{
+      "heading":"Nettsamfunn",
+      "create_new":"Opprett et nettsamfunn",
+      "members":"Medlemmer",
+      "you_can_join":"Du kan bli med i dette nettsamfunnet",
+      "you_can_leave": "Du kan forlate dette nettsamfunnet",
+      "leave": "Forlat",
+      "join":"Bli med",
+      "export_community_data":"Eksporter data fra dette nettsamfunnet",
+      "edit": {
+          "edit_button": "Rediger",
+          "delete_button": "Slett",
+          "update_community": "Rediger ditt nettsamfunn",
+          "delete_community": "Slett ditt nettsamfunn",
+          "word_required": "Du har ikke fylt inn ordet 'hackAIR'",
+          "word_no_match": "Du har ikke tastet inn ordet 'hackAIR'"
+      }
+  },
+  "badges":{
+      "badges":"Merker",
+      "left_to_unlock":"Se alle merker du kan oppnå",
+      "congrats":"Gratulerer! Du har nettopp fått et",
+      "congrats_continue":"merke!"
+  },
+  "missions":{
+      "new_mission_prompt":"Sjekk ut det nye oppdraget vi har gjort klart til deg!",
+      "progress":"fremgang"
+  },
+  "achievements": {
+      "badges": "merker",
+      "left_to_unlock": "igjen å oppnå"
+  }
+}

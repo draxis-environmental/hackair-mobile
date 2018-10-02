@@ -1,0 +1,30 @@
+<ion-view title="{{ 'profile.delete_account.delete_account_heading' | translate }}" hide-back-button="false" can-swipe-back="true">
+  <ion-nav-bar class="bar-assertive">
+    <ion-nav-back-button class="button-clear">
+      <i class="ion-arrow-left-c"></i> {{ 'general.back' | translate }}
+    </ion-nav-back-button>
+  </ion-nav-bar>
+  <ion-content class="profile edit">
+    <div class="card list info">
+      <form class="delete-form form" name="vm.deleteForm" novalidate>
+        <label class="item item-input">
+          <span class="input-label">{{'profile.delete_account.write_hackair' | translate}}</span>
+          <input type="text" ng-model="vm.delete_word" compare-to="vm.word_for_delete" required>
+          <span class="input-error auth-input-label" style="font-size:13px; color: #ff6666" ng-messages="vm.deleteForm.password.$touched && vm.deleteForm.password.$error" role="alert">
+            <div ng-message="required">{{'profile.delete_account.word_required' | translate}}</div>
+            <div ng-message="compareTo">{{'profile.delete_account.word_no_match' | translate}}</div>
+          </span>
+        </label>
+      </form>
+    <div class="photo-actions">
+      <!-- <button class="button button-assertive" ng-click="vm.goBackToEdit()">{{ 'general.cancel' | translate }}</button> -->
+      <button class="button button-assertive" ng-click="vm.deleteAccount()">{{ 'profile.delete_account.delete_button' | translate }}</button>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="text-left">
+          <p><small>{{'profile.delete_account.disclaimer' | translate}}</small></p>
+        </div>
+    </div>
+  </ion-content>
+</ion-view>

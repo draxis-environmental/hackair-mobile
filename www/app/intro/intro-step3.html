@@ -1,0 +1,19 @@
+<ion-view hide-nav-bar="true" on-swipe-right="goTo('intro-step2', 'right')" on-swipe-left="goTo('auth', 'left')">
+
+  <ion-pane class="padding bg-intro">
+    <div class="logo-sm">
+        <img src="img/logo_hack_a_i_r_small_rect_light_b_g.svg" />
+    </div>
+
+    <div class="text-center info-box">
+      <city-search placeholder="Search" ng-model="data.address" required name="address" radius="1500000" location-changed="onLocationChanged" intro="true"></city-search>
+      <!--<div class="intro-map" id="intro-map"></div>-->
+      <intro-map intro="true"></intro-map>
+      <h2 ng-show="vm.quality != undefined">{{'intro.air_quality.air_quality_is' | translate}} <strong>{{vm.quality}}</strong></h2>
+      <p ng-show="vm.quality != undefined" class="grey-text">{{'intro.air_quality.register_for_personalized_info' | translate}}</p>
+      <h2 ng-show="vm.quality == undefined">{{'intro.air_quality.no_data_found' | translate}}</h2>
+      <p ng-show="vm.quality == undefined" class="grey-text">{{'intro.air_quality.register_to_measure_and_contribute' | translate}}</p>
+    </div>
+
+  </ion-pane>
+</ion-view>

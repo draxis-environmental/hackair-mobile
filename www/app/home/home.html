@@ -1,0 +1,20 @@
+<ion-view title="Home">
+
+    <ion-nav-title>
+        <city-search placeholder="Search" ng-model="data.address" required name="address" location-changed="vm.locationChanged" radius="1500000" class="header-search"/>
+    </ion-nav-title>
+    <ion-nav-buttons side="right">
+        <button class="button button-icon icon ion-search" ng-click="vm.search()"></button>
+
+    </ion-nav-buttons>
+    <ion-content>
+      <div class="home-cards">
+        <air-quality-info></air-quality-info>
+        <!--
+        <badge-notification></badge-notification>
+        <mission profile="vm.profile"></mission>
+        -->
+        <tip-notification></tip-notification>
+      </div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link rel="manifest" href="manifest.json">
+
+    <!-- un-comment this code to enable service worker
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('service-worker.js')
+          .then(() => console.log('service worker installed'))
+          .catch(err => console.log('Error', err));
+      }
+    </script>-->
+
+
+    <!-- compiled css output -->
+    <link href="css/ionic.app.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <!-- fonts -->
+    <link href="fonts/fonts.css" rel="stylesheet">
+    <!-- leaflet style -->
+    <link href="lib/leaflet/dist/leaflet.css" rel="stylesheet">
+    <link href="lib/leaflet.markercluster/dist/MarkerCluster.css" rel="stylesheet">
+    <link href="lib/leaflet.markercluster/dist/MarkerCluster.Default.css" rel="stylesheet">
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <script src="lib/ngstorage/ngStorage.min.js"></script>
+    <script src="lib/leaflet/dist/leaflet.js"></script>
+    <script src="lib/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
+    <script src="lib/moment/moment.js"></script>
+    <script src="lib/angular-translate/angular-translate.js"></script>
+    <script src="lib/angular-translate-loader-static-files/angular-translate-loader-static-files.js"></script>
+    <script src="lib/angular-dynamic-locale/dist/tmhDynamicLocale.js"></script>
+    <script src="lib/lodash/dist/lodash.js"></script>
+    <script src="lib/restangular/dist/restangular.js"></script>
+    <script src="lib/angular-messages/angular-messages.js"></script>
+    <script src="lib/chart.js/dist/Chart.js"></script>
+    <!--<script src="lib/ionic-native-transitions/dist/ionic-native-transitions.js"></script>-->
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="lib/ngCordova/dist/ng-cordova.js"></script>
+    <script src="lib/ng-cordova-bluetoothle/ng-cordova-bluetoothle.js"></script>
+    <script src="lib/stacktrace-js/dist/stacktrace.min.js"></script>
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="app/app.module.js"></script>
+    <script src="app/app.constants.js"></script>
+    <script src="app/core/exception/exception.module.js"></script>
+    <script src="app/core/router/router.module.js"></script>
+    <script src="app/core/core.module.js"></script>
+    <script src="common/services/services.module.js"></script>
+    <script src="app/intro/intro.module.js"></script>
+    <script src="app/auth/auth.module.js"></script>
+    <script src="app/layout/layout.module.js"></script>
+    <script src="app/home/home.module.js"></script>
+    <script src="app/perception/perception.module.js"></script>
+    <script src="app/photo/photo.module.js"></script>
+    <script src="app/map/map.module.js"></script>
+    <script src="app/community/community.module.js"></script>
+    <script src="app/profile/profile.module.js"></script>
+    <script src="app/sensors/sensors.module.js"></script>
+    <script src="app/components/components.module.js"></script>
+    <script src="app/auth/compare-to.directive.js"></script>
+    <script src="app/achievements/achievements.module.js"></script>
+    <script src="app/photos/photos.module.js"></script>
+    <script src="app/follows/follows.module.js"></script>
+    <script src="app/social/social.module.js"></script>
+
+    <script src="app/core/config.js"></script>
+    <script src="app/core/exception/exception-handler.provider.js"></script>
+    <script src="app/core/exception/exception.js"></script>
+    <script src="app/core/router/router-helper.provider.js"></script>
+    <script src="common/services/camera.service.js"></script>
+    <script src="common/services/location.service.js"></script>
+    <script src="common/services/upload.service.js"></script>
+    <script src="common/services/data.service.js"></script>
+    <script src="common/services/notification.service.js"></script>
+    <script src="app/social/social.service.js"></script>
+
+
+    <script src="app/components/bleair/bleair.factory.js"></script>
+    <script src="app/intro/intro.controller.js"></script>
+    <script src="app/auth/auth.controller.js"></script>
+    <script src="app/photos/photos.controller.js"></script>
+    <script src="app/perception/perception.controller.js"></script>
+    <script src="app/auth/auth.service.js"></script>
+    <script src="app/home/home.controller.js"></script>
+    <script src="app/photo/photo.controller.js"></script>
+    <script src="app/map/map.controller.js"></script>
+    <script src="app/map/map.service.js"></script>
+    <script src="app/community/community.controller.js"></script>
+    <script src="app/profile/profile.controller.js"></script>
+    <script src="app/profile/public/public.controller.js"></script>
+    <script src="app/profile/secondary.profile/secondary.profile.directive.js"></script>
+    <script src="app/social/social.controller.js"></script>
+
+    <script src="app/sensors/sensors.controller.js"></script>
+    <script src="app/sensors/bleair.sensors.controller.js"></script>
+    <script src="app/follows/follows.controller.js"></script>
+    <script src="app/components/airquality/airQualityInfo.controller.js"></script>
+    <script src="app/components/airquality/airQualityInfo.directive.js"></script>
+    <script src="app/components/sidemenu/sideMenu.controller.js"></script>
+    <script src="app/components/sidemenu/sideMenu.directive.js"></script>
+    <script src="app/components/multipleSelect/multipleSelect.directive.js"></script>
+    <script src="app/components/singleSelect/singleSelect.directive.js"></script>
+    <script src="app/components/citySearch/citySearch.directive.js"></script>
+    <script src="app/achievements/achievements.controller.js"></script>
+    <script src="app/components/mission/mission.controller.js"></script>
+    <script src="app/components/mission/mission.directive.js"></script>
+    <script src="app/components/badgeNotification/badgeNotification.controller.js"></script>
+    <script src="app/components/badgeNotification/badgeNotification.directive.js"></script>
+    <script src="app/components/tipNotification/tipNotification.controller.js"></script>
+    <script src="app/components/tipNotification/tipNotification.directive.js"></script>
+    <script src="app/components/map/map.directive.js"></script>
+
+
+    <script src="app/core/core.route.js"></script>
+    <script src="app/intro/intro.route.js"></script>
+    <script src="app/intro/intro.directive.js"></script>
+    <script src="app/auth/auth.route.js"></script>
+    <script src="app/home/home.route.js"></script>
+    <script src="app/perception/perception.route.js"></script>
+    <script src="app/photo/photo.route.js"></script>
+    <script src="app/map/map.route.js"></script>
+    <script src="app/community/community.route.js"></script>
+    <script src="app/profile/profile.route.js"></script>
+    <script src="app/profile/public/public.route.js"></script>
+    <script src="app/sensors/sensors.route.js"></script>
+    <script src="app/achievements/achievements.route.js"></script>
+    <script src="app/components/aqGraph/chart.controller.js"></script>
+    <script src="app/components/aqGraph/chart.directive.js"></script>
+    <script src="app/social/social.route.js"></script>
+
+
+
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?language=en&key=AIzaSyACOaGi2tXOyTGhMxMxaZTnofVPSVkM_kw&libraries=places"></script>
+
+  </head>
+  <body ng-app="hackair" ng-cloak>
+
+
+    <ion-side-menus enable-menu-with-back-views="true">
+
+        <!--
+          The nav bar that will be updated as we navigate between views.
+        -->
+      <ion-nav-bar class="bar-assertive">
+        <ion-nav-buttons side="left">
+          <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+        </ion-nav-buttons>
+      </ion-nav-bar>
+
+      <ion-side-menu side="left">
+        <side-menu></side-menu>
+      </ion-side-menu>
+      <ion-side-menu-content drag-content="false">
+      <!-- Main content, usually <ion-nav-view> -->
+        <ion-nav-view></ion-nav-view>
+
+      </ion-side-menu-content>
+    </ion-side-menus>
+    <intro-footer-bar route="route" next="next" ng-hide="loggedIn"></intro-footer-bar>
+    <div ng-include="'app/layout/layout.html'" ng-if="loggedIn"></div>
+  </body>
+</html>

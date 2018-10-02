@@ -1,0 +1,23 @@
+<ion-view title="Upload your sensor photo">
+    <ion-content>
+        <div class="card photo">
+            <img id="myImage" class="user-photo" ng-src="{{vm.photo}}"/>
+            <div class="photo-backdrop" ng-show="vm.uploading">
+                <div class="progress">
+                    <h5>{{'photo.uploading' | translate}} ({{vm.progress}}%)</h5>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar" ng-style="vm.progressStyle"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="photo-info">
+            <span class="location"><i class="ion-location"></i>&nbsp;{{vm.photoData.city}}</span>
+            <time>{{vm.photoData.date}}</time>
+        </div>
+        <div class="photo-actions">
+            <button class="button button-assertive" ng-click="vm.takeSensorPhoto()">{{'photo.retake' | translate}}</button>
+            <button class="button button-calm" ng-click="vm.uploadSensorPhoto(vm.photo)">{{'photo.upload' | translate}}</button>
+        </div>
+    </ion-content>
+</ion-view>

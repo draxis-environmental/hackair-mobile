@@ -1,0 +1,122 @@
+{
+    "name": "hackair",
+    "version": "5.2.0",
+    "description": "hackair",
+    "dependencies": {
+        "@ionic-native/google-analytics": "^4.5.3",
+        "chart.js": "^2.6.0",
+        "com.telerik.plugins.nativepagetransitions": "git+https://github.com/Telerik-Verified-Plugins/NativePageTransitions.git",
+        "cordova-android": "^6.2.3",
+        "cordova-fabric-plugin": "~1.1.7",
+        "cordova-plugin-android-permissions": "^1.0.0",
+        "cordova-plugin-bluetoothle": "~4.3.3",
+        "cordova-plugin-camera": "~2.4.1",
+        "cordova-plugin-compat": "~1.1.0",
+        "cordova-plugin-console": "~1.0.7",
+        "cordova-plugin-device": "~1.1.6",
+        "cordova-plugin-file": "~4.3.3",
+        "cordova-plugin-file-transfer": "~1.6.3",
+        "cordova-plugin-geolocation": "~2.4.3",
+        "cordova-plugin-globalization": "~1.0.7",
+        "cordova-plugin-google-analytics": "^1.8.3",
+        "cordova-plugin-keyboard": "~1.1.5",
+        "cordova-plugin-splashscreen": "~4.0.3",
+        "cordova-plugin-statusbar": "~2.2.3",
+        "cordova-plugin-whitelist": "git+https://github.com/apache/cordova-plugin-whitelist.git",
+        "cordova-plugin-x-socialsharing": "git+https://github.com/EddyVerbruggen/SocialSharing-PhoneGap-Plugin.git",
+        "cordova-plugin-x-toast": "git+https://github.com/EddyVerbruggen/Toast-PhoneGap-Plugin.git",
+        "cordova.plugins.diagnostic": "~3.6.0",
+        "es6-promise-plugin": "^4.1.0",
+        "gulp": "^3.5.6",
+        "gulp-concat": "^2.2.0",
+        "gulp-minify-css": "^0.3.0",
+        "gulp-rename": "^1.2.0",
+        "gulp-sass": "^2.0.4",
+        "ionic-plugin-keyboard": "~2.2.1"
+    },
+    "devDependencies": {
+        "bower": "^1.3.3",
+        "gulp-util": "^2.2.14",
+        "ionic": "3.15.2",
+        "shelljs": "^0.3.0",
+        "gulp": "^3.5.6",
+        "gulp-concat": "^2.2.0",
+        "gulp-minify-css": "^0.3.0",
+        "gulp-rename": "^1.2.0",
+        "gulp-sass": "^2.0.4"
+    },
+    "cordovaPlugins": [
+        {
+            "locator": "https://github.com/apache/cordova-plugin-whitelist.git",
+            "id": "cordova-plugin-whitelist"
+        },
+        "cordova-plugin-console",
+        "cordova-plugin-statusbar",
+        "cordova-plugin-device",
+        "ionic-plugin-keyboard",
+        "cordova-plugin-splashscreen",
+        "cordova-plugin-camera",
+        "cordova-plugin-compat",
+        "cordova-plugin-keyboard",
+        "cordova-plugin-geolocation",
+        "cordova.plugins.diagnostic",
+        "cordova-plugin-file-transfer",
+        "cordova-plugin-file",
+        {
+            "locator": "https://github.com/Telerik-Verified-Plugins/NativePageTransitions",
+            "id": "com.telerik.plugins.nativepagetransitions"
+        },
+        {
+            "locator": "https://github.com/EddyVerbruggen/Toast-PhoneGap-Plugin.git",
+            "id": "cordova-plugin-x-toast"
+        },
+        "cordova-plugin-globalization",
+        "cordova-plugin-bluetoothle",
+        {
+            "id": "cordova-fabric-plugin",
+            "locator": "cordova-fabric-plugin",
+            "variables": {
+                "FABRIC_API_KEY": "2496a2d1b069c5232ed053d602a665d84f66c3ad",
+                "FABRIC_API_SECRET": "331c342f0a4983a02e58b050b31b4b78eff050d0eff6a906a182196fa86b891d"
+            }
+        }
+    ],
+    "cordovaPlatforms": [
+        {
+            "platform": "android",
+            "version": "latest",
+            "locator": "android"
+        }
+    ],
+    "cordova": {
+        "platforms": [
+            "android"
+        ],
+        "plugins": {
+            "cordova-fabric-plugin": {
+                "FABRIC_API_KEY": "2496a2d1b069c5232ed053d602a665d84f66c3ad",
+                "FABRIC_API_SECRET": "331c342f0a4983a02e58b050b31b4b78eff050d0eff6a906a182196fa86b891d"
+            },
+            "cordova-plugin-whitelist": {},
+            "cordova-plugin-console": {},
+            "cordova-plugin-statusbar": {},
+            "cordova-plugin-device": {},
+            "ionic-plugin-keyboard": {},
+            "cordova-plugin-splashscreen": {},
+            "cordova-plugin-camera": {},
+            "cordova-plugin-compat": {},
+            "cordova-plugin-keyboard": {},
+            "cordova-plugin-geolocation": {},
+            "cordova.plugins.diagnostic": {},
+            "cordova-plugin-file-transfer": {},
+            "cordova-plugin-file": {},
+            "com.telerik.plugins.nativepagetransitions": {},
+            "cordova-plugin-x-toast": {},
+            "cordova-plugin-globalization": {},
+            "cordova-plugin-bluetoothle": {},
+            "cordova-plugin-x-socialsharing": {},
+            "cordova-plugin-android-permissions": {},
+            "cordova-plugin-google-analytics": {}
+        }
+    }
+}

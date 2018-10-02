@@ -1,0 +1,14 @@
+<ion-view title="{{ 'sections.my_sensors' | translate }}">
+    <ion-content class="sensors">
+        <div class="list card">
+            <a class="item item-avatar" ng-repeat="sensor in vm.sensors" href="#/sensors/{{sensor.id}}">
+                <img src="img/ionic.png" />
+                <h2>{{ sensor.name }}</h2>
+                <p><i class="ion-location"></i> {{ sensor.location.properties.label_short }}</p>
+            </a>
+            <a class="item add-sensor" style="margin-bottom:30px; font-size:13px;" ui-sref="sensors.create">
+                <img src="img/icons/icon_small_create.svg" /> {{ 'sensors.add_new' | translate }}
+            </a>
+        </div>
+    </ion-content>
+</ion-view>

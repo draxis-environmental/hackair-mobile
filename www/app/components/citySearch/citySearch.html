@@ -1,0 +1,13 @@
+<div class="city-search-autocomplete">
+    <img src="img/icons/icon_pin_pastel_red.svg" height="24px" ng-if="intro"/>
+    <input type="text" autocomplete="off" ng-model="searchQuery" ng-blur="loseFocus()">
+    <!-- <input type="text" autocomplete="off" ng-model="searchQuery"> -->
+    <img src="img/icons/icon_search_blue_munsell.svg" height="24px" ng-if="intro"/>
+    <div class="" ng-if="dropDownActive">
+        <ion-list>
+            <ion-item ng-repeat="location in locations" ng-click="selectLocation(location)" class="city-search-result">
+                {{location.description}}
+            </ion-item>
+        </ion-list>
+    </div>
+</div>

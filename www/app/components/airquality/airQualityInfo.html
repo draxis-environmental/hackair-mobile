@@ -1,0 +1,32 @@
+<div class="card air-quality"> 
+    <img class="" ng-src="{{vm.image}}" ng-show="vm.quality !== undefined"/>
+    <div class="air-quality-info {{vm.quality}}" ng-show="vm.quality !== undefined">
+        <date></date>
+        <h4 ng-if="!vm.selectedCity.city">{{ vm.selectedCity }}</h4>
+        <h2>{{ 'air_quality.air_quality_is' | translate }}</h2>
+        <a class="more-info" ng-click="openPopoverMeasurements($event)"><i class="ion-information-circled"></i></a>
+        <h1>{{ 'air_quality.' + vm.quality | translate }}!</h1>
+        <a href="#" ui-sref="aq-history"><i class="ion-ios-clock"></i>{{ 'air_quality.history' | translate }}</a>
+        <a href="#" ui-sref="aq-share"><i class="ion-share"></i>{{ 'air_quality.share' | translate }}</a>
+    </div>
+    <div class="air-quality-info" ng-if="vm.unsupported">
+      <h4 ng-if="vm.selectedCity.city">{{ vm.selectedCity.city }}</h4>
+      <h6>{{ 'air_quality.disclaimers.disclaimer_unsupportedcity' | translate }}</h6>
+    </div>
+    <ul class="activities" ng-if="vm.showRecommendations">
+      <li class="running" ng-if="vm.texts.running" ng-class="{'active': vm.isActive('running')}" ng-click="vm.setActive('running')"></li>
+      <li class="walking" ng-if="vm.texts.walking" ng-class="{'active': vm.isActive('walking')}" ng-click="vm.setActive('walking')"></li>
+      <li class="cycling" ng-show="vm.texts.pets" ng-class="{'active': vm.isActive('pets')}" ng-click="vm.setActive('pets')"></li>
+      <li class="park" ng-show="vm.texts.park" ng-class="{'active': vm.isActive('park')}" ng-click="vm.setActive('park')"></li>
+      <li class="picnic" ng-show="vm.texts.picnic" ng-class="{'active': vm.isActive('picnic')}" ng-click="vm.setActive('picnic')"></li>
+      <li class="work" ng-show="vm.texts.work" ng-class="{'active': vm.isActive('work')}" ng-click="vm.setActive('work')"></li>
+      <li ng-click="openPopoverRecommendations($event)" class="disclaimers">
+        <a class="more-info"><i class="ion-information-circled"></i></a>
+      </li>
+    </ul>
+    <p ng-if="vm.showRecommendations">
+        <!-- Translate this in controller -->
+        <span class="recommendation-colour"></span>{{vm.quote}}
+    </p>
+
+</div>

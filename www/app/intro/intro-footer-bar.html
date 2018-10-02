@@ -1,0 +1,11 @@
+<div class="bar bar-footer bar-calm">
+    <a ng-hide="vm.route == 'auth' || vm.route == 'forgot-password'" class="button button-clear button-small" style="font-size:1em; margin-left:5px;" ui-sref="auth">{{'intro.skip' | translate}}</a>
+    <a ng-show="vm.route == 'forgot-password'" class="button icon-left ion-chevron-left button-clear button-small" style="font-size:1em!important;" ui-sref="auth"></a>
+    <div class="title">
+        <div class="step-circle" ng-class="{'active': vm.route == 'intro-welcome'}" ng-click="goTo('intro-welcome')"></div>
+        <div class="step-circle" ng-class="{'active': vm.route == 'intro-step2'}" ng-click="goTo('intro-step2')"></div>
+        <div class="step-circle" ng-class="{'active': vm.route == 'intro-step3'}" ng-click="goTo('intro-step3')"></div>
+        <div class="step-circle" ng-class="{'active': vm.route == 'auth'}" ng-click="goTo('auth')"></div>
+    </div>
+    <a ng-hide="vm.route == 'auth' || vm.route == 'forgot-password'" class="button icon-right ion-chevron-right button-clear button-small" style="font-size:1em!important;" href="{{ vm.next }}"></a>
+</div>

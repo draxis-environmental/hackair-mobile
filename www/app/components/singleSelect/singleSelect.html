@@ -1,0 +1,12 @@
+<ion-modal-view>
+    <ion-header-bar align-title="center" class="bar bar-header {{ singleSelect.headerclass }}">
+        <button class="button button-icon ion-close" ng-click="closeModal();"></button>
+        <h1 class="title">{{singleSelect.title}}</h1>
+        <button class="button button-icon ion-checkmark" ng-click="saveOptions();"></button>
+    </ion-header-bar>
+    <ion-content scroll="{{ singleSelect.scroll }}">
+        <ion-list>
+            <ion-radio ng-repeat="option in singleSelect.tempOptions" ng-model="singleSelect.selected" ng-value="option[singleSelect.valueProperty]">{{ option[singleSelect.optiontextProperty] }}</ion-radio>
+        </ion-list>
+    </ion-content>
+</ion-modal-view>

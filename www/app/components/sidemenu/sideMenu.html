@@ -1,0 +1,40 @@
+<div class="sidemenu">
+    <ion-scroll style="height: 100vh;">
+    <div class="header">
+    <a class="close-btn" menu-close><i class="icon ion-close"></i></a>
+    <div class="avatar">
+        <img ng-src="{{vm.profile.profile_picture || 'img/avatar-default.png'}}"/>
+    </div>
+    <div class="info">
+        <h4>{{vm.profile.username || "UserName"}}</h4>
+        <div class="level-container">
+            <div class="level" style="width:{{vm.profile.progress}}%"></div>
+        </div>
+        <h6>{{ vm.profile.level.name || 0 }}</h6>
+    </div>
+    </div>
+
+    <ion-list>
+    <a class="item" ui-sref="profile.view" menu-close>{{ 'profile.my_profile' | translate }}</a>
+    <!--<a class="item" ui-sref="social" menu-close>{{ 'general.social' | translate }}</a>-->
+    <a class="item" ui-sref="sensors.measure" menu-close>{{ 'sensors.send_measurement' | translate }}</a>
+    <!--
+    <li class="item item-toggle">
+        {{ 'profile.secondary_profile' | translate }}
+        <label class="toggle toggle-calm">
+        <input type="checkbox">
+        <div class="track">
+            <div class="handle"></div>
+        </div>
+        </label>
+    </li>
+    <a class="item" menu-close>{{ 'general.settings' | translate }}</a>
+    <a class="item" menu-close>{{ 'general.install_hackair_cardboard_sensors' | translate }}</a>
+    <a class="item" menu-close>{{ 'general.invite_friends' | translate }}</a>
+    <a class="item" menu-close>{{ 'general.add_sensor_measurement' | translate }}</a>
+    <a class="item" menu-close>{{ 'general.about' | translate }}</a>
+    -->
+    <a class="item logout" menu-close ng-click="vm.logout()">{{ 'general.logout' | translate }}</a>
+    </ion-list>
+    <ion-scroll style="max-height:100vh;">
+</div>

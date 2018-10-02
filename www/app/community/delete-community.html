@@ -1,0 +1,30 @@
+<ion-view title="{{ 'communities.edit.delete_community' | translate }}" hide-back-button="false" can-swipe-back="true">
+    <ion-nav-bar class="bar-assertive">
+      <ion-nav-back-button class="button-clear">
+          <i class="ion-arrow-left-c"></i> {{ 'general.back' | translate }}
+      </ion-nav-back-button>
+    </ion-nav-bar>
+    <ion-content class="communities create">
+      <div class="card list info">
+        <div>
+          <p class="disclaimer">Please type the word 'hackAIR' to delete your community</p>
+        </div>
+        <form name="vm.deleteCommunityForm" novalidate>
+          <label class="item-input">
+            <input type="text" name="delete_word" ng-model="vm.delete_word" compare-to="vm.word_for_delete" required>
+          </label>
+        </form>
+        <div>
+          <p ng-if="vm.deleteCommunityForm.delete_word.$pristine">Type the word 'hackAIR'</p>
+          <span class="input-error auth-input-label" style="font-size:10px; text-align:center; color: #ff6666" ng-messages="vm.deleteCommunityForm.delete_word.$touched && vm.deleteCommunityForm.delete_word.$error" role="alert">
+            <div ng-message="required">{{'communities.edit.word_required' | translate}}</div>
+            <div ng-message="compareTo">{{'communities.edit.word_no_match' | translate}}</div>
+          </span>
+        </div>
+        <div class="photo-actions">
+            <!-- <button class="button button-assertive" ng-click="vm.goBackToEdit()">{{ 'general.cancel' | translate }}</button> -->
+            <button class="button button-assertive" ng-click="vm.deleteCommunity()">{{ 'profile.delete_account.delete_button' | translate }}</button>
+          </div>
+      </div>
+    </ion-content>
+  </ion-view>

@@ -1,0 +1,54 @@
+<ion-view title="{{ 'sections.edit_sensor' | translate }}" hide-back-button="false" can-swipe-back="true">
+    <ion-nav-bar class="bar-assertive">
+        <ion-nav-back-button class="button-clear">
+          <i class="ion-arrow-left-c"></i> {{ 'general.back' | translate }}
+        </ion-nav-back-button>
+    </ion-nav-bar>
+    <ion-content class="profile edit">
+      <div class="card list info">
+        <div class="header">
+          <div class="avatar" ng-click="vm.getPhoto()">
+            <img height="80px" ng-src="{{ vm.profile.profile_picture || 'img/u_i_avatar_empty.svg' }}" />
+            <span class="icon-edit"></span>
+          </div>
+        </div>
+
+        <label class="item item-input">
+          <span class="input-label">{{'profile.name' | translate}}</span>
+          <input type="text" ng-model="vm.sensor.name">
+        </label>
+
+        <ion-single-select title="Type" multiple="false" options="vm.types" class="item item-input item-icon-right" headerclass="bar-assertive" ng-model="vm.sensor.type">
+          <div class="input-label">
+            {{'sensor.type' | translate}}
+          </div>
+          <span>{{vm.getOptionsSelected(vm.types, 'name', 'selected')}}</span>
+          <i class="icon ion-android-arrow-dropdown"></i>
+        </ion-single-select>
+        <label style="border-bottom:none;" class="item item-input" ng-hide="vm.getOptionsSelected(vm.types, 'value', 'selected') === 'bleair'">
+          <span class="input-label">{{'sensor.sensor_location_title' | translate}}</span>
+          <input type="text" ng-model="vm.sensor.location.properties.label" disabled>
+        </label>
+        <button class="chooselocation" ng-click="openSensorMap()" ng-hide="vm.getOptionsSelected(vm.types, 'value', 'selected') === 'bleair'">Choose Location</button>
+
+        <ion-single-select title="Location Details" multiple="false" options="vm.locationTypes" class="item item-input item-icon-right" headerclass="bar-assertive" ng-model="vm.sensor.location_type" ng-hide="vm.getOptionsSelected(vm.types, 'value', 'selected') === 'bleair'">
+          <div class="input-label">
+          {{'sensor.locationType' | translate}}
+          </div>
+          <span>{{vm.getOptionsSelected(vm.locationTypes, 'name', 'selected')}}</span>
+          <i class="icon ion-android-arrow-dropdown"></i>
+        </ion-single-select>
+
+        <label class="item item-input" ng-hide="vm.getOptionsSelected(vm.types, 'value', 'selected') === 'bleair'">
+          <span class="input-label">{{'sensor.floor' | translate}}</span>
+          <input type="text" ng-model="vm.sensor.floor">
+        </label>
+
+      </div>
+      <div class="photo-actions">
+        <button class="button button-assertive" ng-click="vm.back()">{{ 'general.cancel' | translate }}</button>
+        <button class="button button-calm" ng-click="vm.updateSensor()">{{ 'general.save' | translate }}</button>
+      </div>
+    </ion-content>
+</ion-view>
+

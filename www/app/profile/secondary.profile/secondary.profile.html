@@ -1,0 +1,47 @@
+<div class="card list">
+  <div class="item item-divider">
+     {{ 'profile.secondary_profile_info' | translate }}
+ </div>
+
+ <label class="item item-input">
+  <span class="input-label">{{'profile.name' | translate}}</span>
+  <input type="text" ng-model="vm.profile.secondary_profile.details.firstname">
+</label>
+<label class="item item-input">
+  <span class="input-label">{{'profile.surname' | translate}}</span>
+  <input type="text" ng-model="vm.profile.secondary_profile.details.lastname">
+</label>
+
+ <ion-single-select title="Year of birth" options="vm.secondary_profile_years" class="item item-input item-icon-right" headerclass="bar-assertive">
+     <div class="input-label">
+     {{'profile.year_of_birth' | translate}}
+     </div>
+     <span>{{vm.getOptionsSelected('secondary_profile_years', 'name', 'selected')}}</span>
+     <i class="icon ion-android-arrow-dropdown"></i>
+ </ion-single-select>
+
+ <ion-single-select title="Gender" options="vm.secondary_profile_genders" class="item item-input item-icon-right" headerclass="bar-assertive">
+     <div class="input-label">
+     {{'profile.gender' | translate}}
+     </div>
+     <span>{{vm.getOptionsSelected('secondary_profile_genders', 'name', 'selected')}}</span>
+     <i class="icon ion-android-arrow-dropdown"></i>
+ </ion-single-select>
+
+ <ion-multiple-select title="Sensitivities" options="vm.secondary_profile_sensitivities" class="item item-input item-icon-right" on-close="vm.onSecondaryCloseOptions" headerclass="bar-assertive">
+     <div class="input-label">
+     {{'profile.sensitivities' | translate}}
+     </div>
+     <i class="icon ion-android-arrow-dropdown"></i>
+ </ion-multiple-select>
+ <textarea class="padding" disabled="disabled" ng-show="vm.secondaryProfileSelectedSensitivitiesJoined.length">{{ vm.secondaryProfileSelectedSensitivitiesJoined }}</textarea>
+
+ <ion-multiple-select title="Outdoor activities" options="vm.secondary_profile_outdoor_activities" class="item item-input item-icon-right" on-close="vm.onSecondaryCloseOptions" headerclass="bar-assertive">
+     <div class="input-label">
+     {{'profile.outdoor_activities' | translate}}
+     </div>
+     <i class="icon ion-android-arrow-dropdown"></i>
+ </ion-multiple-select>
+ <textarea class="padding" disabled="disabled" ng-show="vm.secondaryProfileSelectedActivitiesJoined.length">{{ vm.secondaryProfileSelectedActivitiesJoined }}</textarea>
+
+</div>

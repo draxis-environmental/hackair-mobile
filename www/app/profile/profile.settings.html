@@ -1,0 +1,54 @@
+<ion-view title="{{ 'profile.edit_settings.edit_settings_heading' | translate }}" hide-back-button="false" can-swipe-back="true">
+  <ion-nav-bar class="bar-assertive">
+    <ion-nav-back-button class="button-clear">
+      <i class="ion-arrow-left-c"></i> {{ 'general.back' | translate }}
+    </ion-nav-back-button>
+  </ion-nav-bar>
+
+  <ion-content class="profile edit">
+    <div class="card list info">
+      
+      <ion-item>
+        <div class="public" style="">
+            <h6 class="option" style="font-size:18px; font-weight:bold; display:block;">{{'profile.edit_settings.notification_settings_heading' | translate}}</h6>
+            <h6 class="option">{{ 'profile.edit_settings.i_want_to_receive_notification_emails' | translate }}</h6>
+            <label class="toggle" ng-click="vm.toggleNotificationEmails()">
+                <input type="checkbox" ng-checked="vm.profile.notify_email">
+                <div class="track">
+                    <div class="handle"></div>
+                </div>
+            </label>
+        </div> 
+      </ion-item>          
+
+      <ion-item>
+        <div class="public">
+            <h6 class="option" style="font-size:18px; font-weight:bold; display:block;">{{'profile.privacy_settings_heading' | translate}}</h6>
+            <h6 class="option">{{ 'profile.make_my_profile_public' | translate }}</h6>
+            <label class="toggle" ng-click="vm.togglePrivacy()">
+                <input type="checkbox" ng-checked="!vm.profile.private">
+                <div class="track">
+                    <div class="handle"></div>
+                </div>
+            </label>
+            <h6 class="option-info"><i class="icon ion-information-circled"></i>&nbsp;{{ 'profile.what_does_this_mean' | translate }}</h6>
+        </div> 
+      </ion-item>  
+
+      <ion-item>
+        <div class="public" style="">
+            <h6 class="option" style="font-size:18px; font-weight:bold; display:block;">{{'profile.edit_settings.newsletter_settings_heading' | translate}}</h6>
+            <h6 class="option">{{ 'profile.edit_settings.i_want_to_receive_newsletters' | translate }}</h6>
+            <label class="toggle" ng-click="vm.toggleNewsletter()">
+                <input type="checkbox" ng-checked="vm.profile.accept_newsletters">
+                <div class="track">
+                    <div class="handle"></div>
+                </div>
+            </label>
+        </div> 
+      </ion-item>            
+
+    </div>
+  </ion-content>
+
+</ion-view>

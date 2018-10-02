@@ -1,0 +1,25 @@
+<div class="card mission-card">
+
+  <div class="row">
+    <div class="col col-20">
+      <img class="home-icon" src="img/ui/illustration_mission.png" />
+    </div>
+    <div class="col">
+      <p>{{'missions.new_mission_prompt' | translate}}</p>
+    </div>
+    <a ui-sref="missions.list">
+      <div class="col col-10">
+        <img class="chevron" src="img/icon_small_chevron_right.svg" />
+      </div>
+    </a>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col text-center">
+      <span class="level-text">Level {{ vm.profile.level.id }} {{'missions.progress' | translate}}: </span>
+      <div class="level-container">
+            <div class="level" style="width:{{vm.profile.progress}}%;"></div>
+      </div>
+    </div>
+  </div>
+</div>

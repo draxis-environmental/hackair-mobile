@@ -1,0 +1,19 @@
+{
+  "name": "hackair",
+  "app_id": "",
+  "gulpStartupTasks": [
+    "sass",
+    "watch"
+  ],
+  "watchPatterns": [
+    "www/**/*",
+    "!www/lib/**/*",
+    "!www/**/*.map",
+    "scss/**/*"
+  ],
+  "type": "ionic1",
+  "integrations": {
+    "cordova": {},
+    "gulp": {}
+  }
+}

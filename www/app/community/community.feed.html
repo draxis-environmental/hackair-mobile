@@ -1,0 +1,21 @@
+<ion-view title="{{vm.selectedCommunity.name}}" hide-back-button="false" can-swipe-back="true">
+  <ion-nav-bar class="bar-assertive">
+    <ion-nav-back-button class="button-clear">
+        <i class="ion-arrow-left-c"></i> {{ 'general.back' | translate }}
+    </ion-nav-back-button>
+  </ion-nav-bar>
+  <ion-content class="community-feed">
+    <div class="feed-item" ng-repeat="item in vm.communityFeed">
+      <div>
+        <p>
+          <img class="avatar" ng-src="{{ item.profile_picture || 'img/u_i_avatar_empty.svg' }}" />
+          <span class="name">{{ item.name + " " + item.surname }}</span> {{ item.action }}
+          <h6>{{ item.updated_at }}</h6>
+        </p>
+      </div>
+      <div class="card" ng-if="item.social_activity_type === 'UploadSkyPhoto'">
+        <img ng-src="item.object_metadata.sky_photo_thumb">
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

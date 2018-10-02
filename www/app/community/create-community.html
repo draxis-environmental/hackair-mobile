@@ -1,0 +1,30 @@
+<ion-view title="{{ 'communities.create_new' | translate }}" hide-back-button="false" can-swipe-back="true">
+  <ion-nav-bar class="bar-assertive">
+    <ion-nav-back-button class="button-clear">
+        <i class="ion-arrow-left-c"></i> {{ 'general.back' | translate }}
+    </ion-nav-back-button>
+  </ion-nav-bar>
+  <ion-content class="communities create">
+    <div class="card list info">
+      <div class="header">
+        <div ng-click="vm.getPhoto()" class="text-center">
+          <img ng-src="{{ vm.community.image || 'img/u_i_community_photo_empty.svg' }}" />
+          <span class="icon-edit"></span>
+        </div>
+      </div>
+      <label class="item-input">
+        <input type="text"  ng-model="vm.community.name">
+      </label>
+      <div>
+        <p>Community name</p>
+      </div>
+      <div class="item">
+        <textarea placeholder="Write a short description here (180 chars)" ng-model="vm.community.description"></textarea>
+      </div>
+    </div>
+    <div class="photo-actions">
+      <button class="button button-assertive" ui-sref="community.list">{{'general.cancel' | translate}}</button>
+      <button class="button button-calm" ng-click="vm.createCommunity()">{{'general.create' | translate}}</button>
+    </div>
+  </ion-content>
+</ion-view>

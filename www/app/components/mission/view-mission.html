@@ -1,0 +1,18 @@
+<ion-view title="View Missions" cache-view="false">
+    <ion-nav-bar class="bar-assertive">
+      <ion-nav-back-button class="button-clear">
+        <i class="ion-arrow-left-c"></i> {{ 'general.back' | translate }}
+      </ion-nav-back-button>
+    </ion-nav-bar>
+    <ion-content class="view-mission">
+      <div class="col border-left text-center">
+        <div class="mission-title"><h6>{{vm.testMissions[vm.currentMissionID].fullTitle}}</h6></div>
+
+        <img class="img-responsive" src="{{vm.testMissions[vm.currentMissionID].image}}">
+
+        <div class="mission-text" ng-bind-html="vm.testMissions[vm.currentMissionID].fullText">
+
+        </div>
+      </div>
+    </ion-content>
+</ion-view>

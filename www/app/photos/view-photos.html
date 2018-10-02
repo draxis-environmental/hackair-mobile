@@ -1,0 +1,36 @@
+<style>
+.popup-head {padding-top: 10px!important;}
+.popup-body {text-align:center;}
+</style>
+
+<ion-view title="{{ 'sections.my_photos' | translate }}">
+  <ion-nav-bar class="bar-assertive">
+    <ion-nav-back-button class="button-clear">
+      <i class="ion-arrow-left-c"></i> {{ 'general.back' | translate }}
+    </ion-nav-back-button>
+  </ion-nav-bar>
+  <ion-content class="photos">
+    <div class="list" >
+      <div class="row">
+        <div class="col-80 col-offset-10">
+          <p>{{'photo.photos_marked_with' | translate}} <img src="img/icons/icon_small_check_circled.svg"> {{'photo.were_used' | translate}}</p>
+          <p>{{'photo.photos_marked_with' | translate}} <img src="img/icons/cardboard-icon4.png" height="35" style="opacity:0.9;"> {{'photos.come_from_cardboard_sensors' | translate}}</p>
+        </div>
+      </div>
+      <div class="row" style="flex-wrap: wrap" >
+        <div class="col-25 col-center" ng-repeat="photo in vm.photos" >
+
+<!--           <img class="chevron" ng-show="photo.used" src="img/icons/icon_small_check_circled.svg">
+          <img ng-if="!photo.image_info.id" src="img/icons/cardboard-icon4.png" height="40" style="opacity:0.8;" class="chevron">  
+          <img style="height:64px; width:85px;" ng-click="vm.getPhotoAQI(photo.image_info.id)" ng-src="{{photo.source_info.thumb_image_url}}" /> -->
+
+          <img class="chevron" ng-show="photo.used" src="img/icons/icon_small_check_circled.svg">
+          <img ng-if="!photo.image_info.id" src="img/icons/cardboard-icon4.png" height="40" style="opacity:0.8;" class="chevron">  
+          <img ng-if="photo.image_info.id" style="height:64px; width:85px;" ng-click="vm.getPhotoAQI(photo.image_info.id)" ng-src="{{photo.source_info.thumb_image_url}}" />
+          <img ng-if="!photo.image_info.id" style="height:64px; width:85px;" ng-src="{{photo.source_info.thumb_image_url}}" />
+
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

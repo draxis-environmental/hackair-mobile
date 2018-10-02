@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>B2076A35-3C7A-4BDF-922E-7F94442F9368</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <polygon id="path-1" points="4 2 12.5 2 16 5.5 16 18 4 18"></polygon>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="12" height="16" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icons/Icon_Small_Export">
+            <use id="Rectangle-17" stroke="#00A3AC" mask="url(#mask-2)" stroke-width="2" xlink:href="#path-1"></use>
+            <polyline id="Path-10" stroke="#00A3AC" points="12 2 12 6 16 6"></polyline>
+            <g id="Group-2" transform="translate(7.000000, 8.000000)" fill="#00A3AC">
+                <rect id="Rectangle-18" x="0" y="3" width="6" height="1" rx="0.5"></rect>
+                <rect id="Rectangle-18" transform="translate(4.467767, 2.367767) rotate(-315.000000) translate(-4.467767, -2.367767) " x="2.46776676" y="1.86776733" width="4" height="1" rx="0.5"></rect>
+                <rect id="Rectangle-18" transform="translate(4.467767, 4.567767) rotate(-45.000000) translate(-4.467767, -4.567767) " x="2.46776676" y="4.06776714" width="4" height="1" rx="0.5"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

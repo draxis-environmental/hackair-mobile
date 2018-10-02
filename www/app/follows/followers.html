@@ -1,0 +1,39 @@
+<ion-view title="{{ 'sections.my_followers' | translate }}">
+  <ion-nav-bar class="bar-assertive">
+    <ion-nav-back-button class="button-clear">
+        <i class="ion-arrow-left-c"></i> {{ 'general.back' | translate }}
+    </ion-nav-back-button>
+  </ion-nav-bar>
+  <ion-content class="follows">
+    <div class="row">
+      <div class="col-80 col-offset-10">
+        <p>{{'follows.list_of_users_followers' | translate}}</p>
+      </div>
+    </div>
+    <div class="list card no-padding" >
+      <div class="item" ng-repeat="follower in vm.followMap.followers">
+        <div class="row">
+          <div class="col-25">
+            <img class="avatar" src="{{ follower.photo }}" />
+          </div>
+          <div class="col-75">
+            <h2>{{ follower.fullName }}</h2>
+            <h5>{{ follower.username }}</h5>            
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25"></div>
+          <div class="">
+            <button ng-show="!follower.follow_status" ng-click="vm.toggleFollow(follower)" class="button-follows-b">{{'follows.follow' | translate}}</button>
+            <button ng-show="follower.follow_status" ng-click="vm.toggleFollow(follower)" class="button-follows-r">{{'follows.unfollow' | translate}}</button>
+          </div>
+          <div class="">
+            <a style="margin-left:10px;" ui-sref="public.view({id:'{{follower.id}}'})">
+              <img class="chevron" src="img/icon_small_chevron_right.svg">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

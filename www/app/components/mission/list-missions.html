@@ -1,0 +1,50 @@
+<ion-view title="View Missions" cache-view="false">
+      <ion-nav-bar class="bar-assertive">
+        <ion-nav-back-button class="button-clear">
+            <i class="ion-arrow-left-c"></i> {{ 'general.back' | translate }}
+        </ion-nav-back-button>
+    </ion-nav-bar>
+    <ion-content class="view-mission">
+      <!--<div class="mission-items list" ng-repeat="mission in vm.testMissions">
+        <div class="card">
+          <div class="row">
+            <div class="col-10">
+              <img src="img/temp/bullseye.png">
+            </div>
+            <div class="col">
+              <p><span class="mission-title">{{mission.shortTitle}}</span><br>
+              {{mission.shortInfo}}</p>
+            </div>
+            <div class="col-10">
+              <a ng-click="vm.updateMissionView(mission.id)">
+                <img src="img/icon_small_chevron_right.svg">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>-->
+
+      <div class="list card">
+            <a class="item item-avatar" ng-repeat="mission in vm.testMissions" href="#/missions/{{mission.id}}">
+                <img src="img/temp/bullseye.png" />
+                <h2>{{mission.shortTitle}}</h2>
+                <img style="float:right; margin-top:-10px;" src="img/icon_small_chevron_right.svg">
+
+
+            </a>
+        </div>
+    </ion-content>
+</ion-view>
+
+
+<!--<ion-view title="View Missions">
+    <ion-content class="missions">
+        <div class="list card">
+            <a class="item item-avatar" ng-repeat="mission in vm.testMissions" href="#/missions/{{mission.id}}">
+                <img src="img/temp/bullseye.png" />
+                <h2>{{mission.shortTitle}}</h2>
+                <img src="img/icon_small_chevron_right.svg">
+            </a>
+        </div>
+    </ion-content>
+</ion-view>-->

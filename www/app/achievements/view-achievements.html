@@ -1,0 +1,28 @@
+<ion-view title="{{ 'sections.my_achievements' | translate }}">
+    <ion-content class="achievements">
+    <div class="card badgesGeneral" >
+            <!-- acquired badges row -->
+            <div class="acquired row card">
+                <div class="col-25 item-badge" ng-repeat="achievement in vm.acquired">
+                    <a href="" ng-click="BadgePopup(achievement, 'acquired')">
+                    <img ng-src="img/badges/Badges_with_bg/{{achievement.display_picture}}" ng-click="" alt=""></a>
+                </div>
+            </div>
+            <!-- / acquired badges row -->
+            <div class="row">
+                <div class="col-90 col-center">
+                    <p class="availableBadges">
+                        <b>{{vm.available.length}} {{'achievements.badges' | translate}}</b> {{'achievements.left_to_unlock' | translate}}
+                    </p>
+                </div>
+            </div>
+            <!-- available badges row -->
+            <div class="available row">
+                <div class="col-25 item-badge available-badge" ng-repeat="achievement in vm.available">
+                    <a href="" ng-click="BadgePopup(achievement, 'available')">
+                    <img ng-src="img/badges/Badges_with_bg_Grayscale/{{achievement.display_picture}}" ng-click="" alt=""></a>
+                </div>                
+            </div> <!-- / available badges row -->
+    </div> <!-- list card -->
+    </ion-content>
+</ion-view>

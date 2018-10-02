@@ -1,0 +1,24 @@
+<ion-view title="{{ 'sensors.monitor' | translate }}">
+  <ion-content class="sensors">
+    <div class="wrapper text-center">
+      <img src="img/hackair-sprite.svg" id="scanning_logo" />
+    </div>
+    <div class="text-center">
+      <p>{{ 'sensors.scanning' | translate }}</p>
+    </div>
+    <div class="list card monitor text-center">
+      <h3>{{ 'sensors.total_measurements_sent' | translate }} <span>{{total_sent}}</span></h3>
+      <div ng-if="pm2_5_value && pm10_value">
+        <h4>{{ 'sensors.latest_measurements' | translate }}</h4>
+        <h5>{{ 'sensors.PM2_5_pollutant' | translate }} <span>{{pm2_5_value}}</span></h5>
+        <h5>{{ 'sensors.PM10_pollutant' | translate }} <span>{{pm10_value}}</span></h5>
+      </div>
+    </div>
+    <div class="text-center">
+      <p>{{ 'sensors.time_disclaimer' | translate }}</p>
+    </div>
+    <div class="text-center">
+      <button class="button button-assertive" ng-click="vm.stopMeasurements()">{{ 'sensors.stop_sending' | translate }}</button>
+    </div>
+  </ion-content>
+</ion-view>

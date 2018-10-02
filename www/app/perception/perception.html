@@ -1,0 +1,32 @@
+<ion-view title="{{ 'sections.perception' | translate }}">
+  <ion-content class="perception">
+    <div class="row">
+      <h3>{{'air_quality.perception_heading' | translate}}</h3>
+    </div>
+    <div class="list" >
+        <div class="item card excellent" ng-click="vm.selectPerception('excellent')" ng-class="{'active': vm.isSelected('excellent')}">
+          <h4>{{ 'air_quality.excellent' | translate }} </h4>
+          <img src="img/perceptions/perfect.png" />
+        </div>
+        <div class="item card good" ng-click="vm.selectPerception('good')" ng-class="{'active': vm.isSelected('good')}">
+          <h4>{{ 'air_quality.good' | translate }} </h4>
+          <img src="img/perceptions/good.png" />
+        </div>
+        <div class="item card medium" ng-click="vm.selectPerception('medium')" ng-class="{'active': vm.isSelected('medium')}">
+          <h4>{{ 'air_quality.medium' | translate }} </h4>
+          <img src="img/perceptions/medium.png" />
+        </div>
+        <div class="item card bad" ng-click="vm.selectPerception('bad')" ng-class="{'active': vm.isSelected('bad')}">
+          <h4>{{ 'air_quality.bad' | translate }} </h4>
+          <img src="img/perceptions/bad.png" />
+        </div>
+    </div>
+    <div class="row">
+      <div class="col col-50 col-offset-67">
+        <button class="button button-calm" ng-click="vm.postPerception()" ng-disabled="vm.isSelected('')">
+          {{ 'general.submit' | translate }}
+        </button>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

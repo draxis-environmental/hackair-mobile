@@ -1,0 +1,22 @@
+<ion-view title="{{'photo.take_a_photo_heading' | translate}}">
+    <ion-content>
+        <div class="list-button" ng-click="vm.takePhoto()">
+            <img class="icon" src="img/icon_small_photos_active.svg" />
+            <h5>{{'photo.take_a_sky_photo' | translate}}</h5>
+            <img class="arrow" src="img/icon_small_chevron_right.svg" height="20px"/>
+        </div>
+        <div class="list-button" ng-click="vm.takeCotsPhoto()">
+          <div class="row">
+            <div class="col-sm-1">
+              <img class="icon" src="img/icon_small_photos_active.svg" />
+            </div>
+            <div class="col-sm-10 text">
+              <h5>{{'photo.take_a_cots_sensor_photo' | translate}}</h5>
+            </div>
+            <div class="col-sm-1">
+              <img class="arrow" src="img/icon_small_chevron_right.svg" height="20px"/>
+            </div>
+          </div>
+        </div>
+    </ion-content>
+</ion-view>

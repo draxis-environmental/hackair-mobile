@@ -1,0 +1,32 @@
+<ion-view title="Share Air Quality Information" hide-back-button="false" can-swipe-back="true" cache-view="false">
+  <ion-nav-bar class="bar-assertive">
+    <ion-nav-back-button class="button-clear">
+      <i class="ion-arrow-left-c"></i> {{ 'general.back' | translate }}
+    </ion-nav-back-button>
+  </ion-nav-bar>
+
+  <ion-content class="aq-share">
+    <div class="popup">
+      <div class="popup-dialog">
+      <!-- popup content-->
+        <div class="popup-content">
+          <div class="popup-body">
+            <!--<p>
+              <a href="https://twitter.com/share" class="twitter-share-button" data-size="large" data-text="{{quote}}" data-url="{{href}}" data-show-count="false"><button class="btn btn-twitter btn-sm">&nbsp;&nbsp;&nbsp;&nbsp;Tweet</button></a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </p>-->
+            <p>
+              <button class="btn btn-twitter btn-xs" ng-click="vm.shareTwitter()">{{'air_quality.share' | translate}}</button>
+            </p>
+            <p>
+              <button class="btn btn-facebook btn-xs" ng-click="vm.shareFacebook()">&nbsp;&nbsp;{{'air_quality.share' | translate}}</button>
+            </p>
+            <!--<p>
+              <button class="btn btn-primary btn-sm share-twitter">via email</button>
+            </p>-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
+

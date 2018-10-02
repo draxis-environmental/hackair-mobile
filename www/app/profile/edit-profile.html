@@ -1,0 +1,149 @@
+<ion-view title="{{ 'sections.edit_my_profile' | translate }}" hide-back-button="false" can-swipe-back="true">
+    <ion-nav-bar class="bar-assertive">
+        <ion-nav-back-button class="button-clear">
+            <i class="ion-arrow-left-c"></i> {{ 'general.back' | translate }}
+        </ion-nav-back-button>
+    </ion-nav-bar>
+    <ion-content class="profile edit">
+        <div class="card list info">
+            <div class="header">
+                <div class="avatar" ng-click="vm.getPhoto()">
+                    <img height="80px" ng-src="{{ vm.profile.profile_picture || 'img/u_i_avatar_empty.svg' }}" />
+                    <span class="icon-edit"></span>
+                </div>
+            </div>
+            <label class="item item-input">
+                <span class="input-label">{{'profile.name' | translate}}</span>
+                <input type="text" ng-model="vm.profile.name">
+            </label>
+            <label class="item item-input">
+                <span class="input-label">{{'profile.surname' | translate}}</span>
+                <input type="text" ng-model="vm.profile.surname">
+            </label>
+            <div class="item item-divider">
+              <a ui-sref="profile.edit-password">{{ 'profile.change_password' | translate }}</a>
+            </div>
+            <div class="item item-divider">
+              <a ui-sref="profile.edit-settings">{{ 'profile.settings' | translate }}</a>
+            </div>            
+            <div class="item item-divider">
+              <a ui-sref="profile.delete-account">{{ 'profile.delete_account.delete_account_heading' | translate }}</a>
+            </div>
+        </div>
+
+        <div class="card list">
+             <div class="item item-divider">
+                {{ 'profile.personal_info' | translate }}
+            </div>
+            
+            <label class="item item-input"></label>
+            <div class="item item-input">
+                <span class="input-label">{{'profile.location_placeholder' | translate}}</span>
+                <city-search placeholder="{{ 'profile.location_placeholder' | translate }}" ng-model="vm.profile.location_str" required name="address" location-changed="vm.locationChanged" editprofile="true" radius="150000"/>
+            </div>
+
+            <ion-single-select title="Year of birth" options="vm.years" class="item item-input item-icon-right" headerclass="bar-assertive">
+                <div class="input-label">
+                {{'profile.year_of_birth' | translate}}
+                </div>
+                <span>{{vm.getOptionsSelected('years', 'name', 'selected')}}</span>
+                <i class="icon ion-android-arrow-dropdown"></i>
+            </ion-single-select>
+
+            <ion-single-select title="Gender" options="vm.genders" class="item item-input item-icon-right" headerclass="bar-assertive">
+                <div class="input-label">
+                {{'profile.gender' | translate}}
+                </div>
+                <span>{{vm.getOptionsSelected('genders', 'name', 'selected')}}</span>
+                <i class="icon ion-android-arrow-dropdown"></i> 
+            </ion-single-select>
+
+            <ion-single-select title="Language" options="vm.languages" class="item item-input item-icon-right" headerclass="bar-assertive">
+                <div class="input-label">
+                {{'profile.language' | translate}}
+                </div>
+                <span>{{vm.getOptionsSelected('languages', 'name', 'selected')}}</span>
+                <i class="icon ion-android-arrow-dropdown"></i>
+            </ion-single-select>            
+
+
+            <ion-multiple-select title="Sensitivities" options="vm.sensitivities" class="item item-input item-icon-right" headerclass="bar-assertive" on-close="vm.onCloseOptions">
+                <div class="input-label">
+                {{'profile.sensitivities' | translate}}
+                </div>
+                <i class="icon ion-android-arrow-dropdown"></i>
+            </ion-multiple-select>
+            <!-- <textarea class="padding" disabled="disabled" ng-show="vm.getOptionsSelected('sensitivities', 'name', 'selected').length">{{ vm.getOptionsSelected('sensitivities', 'name', 'selected') }}</textarea> -->
+            <textarea class="padding" disabled="disabled" ng-show="vm.selectedSensitivities.length">{{vm.selectedSensitivitiesJoined}}</textarea>
+
+            <ion-multiple-select title="Outdoor activities" options="vm.outdoor_activities" class="item item-input item-icon-right" headerclass="bar-assertive" on-close="vm.onCloseOptions">
+                <div class="input-label">
+                {{'profile.outdoor_activities' | translate}}
+                </div>
+                <i class="icon ion-android-arrow-dropdown"></i>
+            </ion-multiple-select>
+            <textarea class="padding" disabled="disabled" ng-show="vm.selectedActivities.length">{{vm.selectedActivitiesJoined}}</textarea>
+            <!-- <textarea class="padding" disabled="disabled" ng-show="vm.getOptionsSelected('outdoor_activities', 'name', 'selected').length">{{ vm.getOptionsSelected('outdoor_activities', 'name', 'selected') }}</textarea> -->
+
+        </div>
+
+        <!--<div ng-if="vm.user.secondary_profile" class="card list">
+             <div class="item item-divider">
+                {{ 'profile.secondary_profile' | translate }}
+            </div>
+            <label class="item item-input">
+                <span class="input-label">{{'profile.location' | translate}}</span>
+                <input type="text">
+            </label>
+            <label class="item item-input">
+                <span class="input-label">{{'profile.year_of_birth' | translate}}</span>
+                <select ng-model="vm.profile.year_of_birth" ng-options="y as year.label for year in vm.years track by year.id">
+
+                </select>
+            </label>
+            <label class="item item-input">
+                <span class="input-label">{{'profile.gender' | translate}}</span>
+                <select ng-model="vm.profile.gender" ng-options="g as gender.label for gender in vm.genders track by gender.key">
+
+                </select>
+            </label>
+            <ion-multiple-select title="Sensitivities" options="vm.sensitivities" class="item item-input item-icon-right" headerclass="bar-assertive">
+                <div class="input-label">
+                {{'profile.sensitivities' | translate}}
+                </div>
+                <i class="icon ion-android-arrow-dropdown"></i>
+            </ion-multiple-select>
+            <textarea class="padding" disabled="disabled">{{ vm.getOptionsSelected(vm.sensitivities, 'name', 'selected') }}</textarea>
+            <ion-multiple-select title="Outdoor activities" options="vm.outdoor_activities" class="item item-input item-icon-right" headerclass="bar-assertive">
+                <div class="input-label">
+                {{'profile.outdoor_activities' | translate}}
+                </div>
+                <i class="icon ion-android-arrow-dropdown"></i>
+            </ion-multiple-select>
+
+            <textarea class="padding" disabled="disabled">{{ vm.getOptionsSelected(vm.outdoor_activities, 'name', 'selected') }}</textarea>
+        </div>-->
+        <secondary-profile ng-show="vm.profile.secondary_profile.show"></secondary-profile>
+        <div class="profile-actions">
+          <div class="row">
+            <div class="col-xs-2" style="padding-top: 15px;">
+              <button class="button button-assertive" ng-click="vm.cancel()">{{'general.cancel' | translate}}</button>
+            </div>
+            <div class="col-xs-8 public text-center">
+              <h6 class="option">{{ 'profile.want_secondary_profile' | translate }}</h6>
+              <label class="toggle">
+                <input type="checkbox" ng-model="vm.profile.secondary_profile.show">
+                <div class="track">
+                  <div class="handle"></div>
+                </div>
+              </label>
+            </div>
+            <div class="col-xs-2" style="padding-top: 15px;">
+              <button class="button button-calm" ng-click="vm.updateProfile()">{{'general.save' | translate}}</button>
+            </div>
+          </div>
+        </div>
+
+    </ion-content>
+</ion-view>
+

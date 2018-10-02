@@ -1,0 +1,11 @@
+<ion-view title="{{ 'photo.choose_a_sensor' | translate }}">
+  <ion-content class="sensors">
+      <div class="list card">
+          <a class="item item-avatar" ng-repeat="sensor in vm.sensors" ng-click="vm.setSensorId(sensor.id)">
+              <img src="img/ionic.png" />
+              <h2>{{ sensor.name }}</h2>
+              <p><i class="ion-location"></i> {{ sensor.location.properties.label_short }}</p>
+          </a>
+      </div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,38 @@
+<ion-view title="{{vm.selectedCommunity.name}}" hide-back-button="false" can-swipe-back="true">
+  <ion-nav-bar class="bar-assertive">
+    <ion-nav-back-button class="button-clear">
+        <i class="ion-arrow-left-c"></i> {{ 'general.back' | translate }}
+    </ion-nav-back-button>
+  </ion-nav-bar>
+  <ion-content class="community-view">
+    <div class="card">
+      <div class="header">
+        <img ng-src="{{vm.selectedCommunity.profile_picture || 'img/u_i_community_photo_empty.svg'}}" />
+        <h2>{{vm.selectedCommunity.name}}</h2>
+        <h4><i class="ion-person-stalker"></i> {{vm.selectedCommunity.num_of_members}} {{'communities.members' | translate}}</h4>
+      </div>
+      <div class="join-community">
+        <p ng-if="!vm.selectedCommunity.joined_member">{{'communities.you_can_join' | translate}} <button class="button button-calm button-edit" ng-click="vm.joinCommunity(vm.selectedCommunity.id)">{{'communities.join' | translate}}</button></p>
+        <p ng-if="vm.selectedCommunity.joined_member">{{'communities.you_can_leave' | translate}} <button class="button button-assertive button-edit" ng-click="vm.leaveCommunity(vm.selectedCommunity.id)">{{'communities.leave' | translate}}</button></p>
+      </div>
+      <div class="description">
+        <p>{{vm.selectedCommunity.description}}</p>
+      </div>
+    </div>
+    <div class="card list">
+      <!--
+      <a ng-if="vm.selectedCommunity.joined_member" class="item" ui-sref="community.feed({id:'{{vm.selectedCommunity.id}}'})">Community social feed<i class="icon ion-chevron-right right"></i></a>
+      <a class="item">Members<i class="icon ion-chevron-right right"></i></a>
+      <a class="item">Contributions<i class="icon ion-chevron-right right"></i></a>
+      <a class="item">Community map<i class="icon ion-chevron-right right"></i></a>
+      -->
+    </div>
+    <div ng-if="vm.selectedCommunity.joined_member" class="card">
+      <div class="export">
+        <a href="">
+          <h5><img src="/img/ui/icon_small_export.svg"><span> {{'communities.export_community_data' | translate}}</span></h5>
+        </a>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

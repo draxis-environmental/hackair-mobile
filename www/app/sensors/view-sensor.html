@@ -1,0 +1,30 @@
+<ion-view title="{{ vm.sensor.name }}" hide-back-button="false" can-swipe-back="true">
+    <ion-nav-bar class="bar-assertive">
+        <ion-nav-back-button class="button-clear">
+          <i class="ion-arrow-left-c"></i> {{ 'general.back' | translate }}
+        </ion-nav-back-button>
+    </ion-nav-bar>
+    <ion-content class="profile sensor-edit edit">
+      <div class="card info">
+        <a class="button button-calm button-edit" href="#/sensors/{{vm.sensor.id}}/edit">{{ 'general.edit' | translate }}</a>
+        <h6 class="access-key"> {{'sensor.access_key' | translate}}: {{vm.sensor.access_key}}</h6>
+        <div class="avatar">
+          <img height="80px" ng-src="{{ vm.sensor.photo || 'img/temp/sensor_2.png' }}" />
+        </div>
+        <h4>{{vm.sensor.name}}</h4>
+        <h5 ng-hide="vm.sensor.type === 'bleair'"><img src="img/ui/icon_small_pin_inactive.svg">{{vm.sensor.location.properties.label}} - Floor {{vm.sensor.floor}}</h5>
+        <h5><img src="img/ui/icon_small_sensor_inactive.svg"> <span ng-if=" vm.sensor.type === 'arduino' ">hackAIR home</span><span ng-if=" vm.sensor.type === 'bleair' ">hackAIR mobile</span></h5>
+      </div>
+      <ul class="card list info snsr-measurements">
+        <li class="item light-background">
+          <h3 class="title">{{'sensor.sensor_measurements_heading' | translate}}<img src="img/ui/icon_small_export.svg"></h3>
+        </li>
+        <li class="item" ng-repeat="measurement in vm.sensor.measurements">
+          <span class="label">{{ measurement.date_str | date : 'yyyy/MM/dd @ HH:mm' }}</span>
+          {{measurement.pollutant_i.name.split('_')[0] + ' : ' + measurement.pollutant_i.index}}
+        </li>
+
+      </ul>
+    </ion-content>
+</ion-view>
+

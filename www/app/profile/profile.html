@@ -1,0 +1,93 @@
+<ion-view title="{{ 'sections.profile' | translate }}" cache-view="false">
+    <ion-content class="profile">
+        <div class="card info">
+            <button class="button button-calm button-edit" ui-sref="profile.edit">{{ 'general.edit' | translate }}</button>
+            <div class="header">
+                <div class="avatar">
+                    <img height="80px" ng-src="{{ vm.profile.profile_picture || 'img/avatar-default.png' }}" />
+                </div>
+                <h4>{{'@' + vm.profile.username || '@Username'}}</h4>
+                <h5>{{ vm.profile.name || ''}} {{vm.profile.surname || ''}}</h5>
+            </div>
+            <li class="item no-padding">
+
+                <div class="level-box">
+                    <h6>{{'profile.level' | translate }} {{vm.profile.level.id || 0}}: {{ vm.profile.level.name || '' }}</h6>
+                    <div class="level-container">
+                        <div class="level" style="width:{{vm.profile.progress}}%;"></div>
+                    </div>
+                </div><!-- hack for inline-block + 50% width
+                --><div class="location-box">
+                    <h6><i class="ion-location"></i>&nbsp;{{ vm.profile.city || 'No location' }}</h6>
+                </div>
+            </li>
+            <li class="item row stats">
+                    <div class="col">
+                        <img src="img/icons/icon_small_sensor_active.svg" height="20px" style=""/>
+                        <span>{{ vm.profile.sensors_count || 0 }}</span>
+                    </div>
+                    <div class="col">
+                        <a ui-sref="photos"><img src="img/icons/icon_small_photos_active.svg" height="20px" style=""/></a>
+                        <span>{{ vm.profile.photos_count || 0 }}</span>
+                    </div>
+                    <div class="col">
+                        <img src="img/icons/icon_small_perception_active.svg" height="20px" style=""/>
+                        <span>{{ vm.profile.feelings_count || 0 }}</span>
+                    </div>
+            </li>
+            <li class="item extra">
+                <div class="row flexwrap">
+                    <div class="col-33">
+                        <span class="title">{{'profile.age' | translate}}: </span><span>{{ vm.profile.age || 'N/A' }}</span>
+                    </div>                    
+                    <div class="col">
+                        <span class="title">{{'profile.gender' | translate}}: </span><span>{{ vm.profile.gender || 'N/A' }}</span>
+                    </div>                    
+                </div>
+                <div class="row flexwrap">
+                    <div class="col">
+                        <span class="title">{{'profile.sensitivities_display_text' | translate}}: </span><span style="white-space: pre-wrap;">{{ vm.profile.groupsString || 'N/A' }}</span>
+                    </div>                                      
+                </div>
+                <div class="row flexwrap">      
+                    <div class="col">
+                        <span class="title">{{'profile.outdoor_activities_display_text' | translate}}: </span><span style="white-space: pre-wrap;">{{ vm.profile.outdoorActivitiesString || 'N/A' }}</span>
+                    </div>                                
+                </div>                
+                <!--<div class="row">
+                    <div class="col">
+                        <span class="title">Age: </span><span>23</span>
+                    </div>
+                    <div class="col">
+                        <span class="title">Age: </span><span>23</span>
+                    </div>
+                </div>-->
+            </li>
+            <div class="row">
+              <span class="recommendations-disclaimer">For the recommendations please see <a href="http://hackair.onsubject.eu/terms-and-conditions/">here</a></span>
+            </div>
+        </div>
+
+        <div class="card list">
+            <a class="item" ui-sref="achievements.view">{{ 'profile.achievements' | translate }} <i class="icon ion-chevron-right right"></i></a>
+            <a class="item" ui-sref="sensors.list">{{ 'profile.sensors' | translate }} <i class="icon ion-chevron-right right"></i></a>
+            <a class="item" ui-sref="following">{{ 'profile.following' | translate }} <i class="icon ion-chevron-right right"></i></a>
+            <a class="item" ui-sref="followers">{{ 'profile.followers' | translate }} <i class="icon ion-chevron-right right"></i></a>
+            <a class="item" ui-sref="photos">{{'profile.photos' | translate}}<i class="icon ion-chevron-right right"></i></a>
+            <a class="item" ui-sref="community.list">{{ 'profile.my_communities' | translate }} <i class="icon ion-chevron-right right"></i></a>
+        </div>
+
+        <div class="public">
+            <h6 class="option">{{ 'profile.make_my_profile_public' | translate }}</h6>
+            <label class="toggle" ng-click="vm.togglePrivacy()">
+                <input type="checkbox" ng-checked="!vm.profile.private">
+                <div class="track">
+                    <div class="handle"></div>
+                </div>
+            </label>
+            <h6 class="option-info"><i class="icon ion-information-circled"></i>&nbsp;{{ 'profile.what_does_this_mean' | translate }}</h6>
+        </div>
+
+    </ion-content>
+</ion-view>
+

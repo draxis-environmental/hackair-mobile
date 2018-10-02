@@ -1,0 +1,16 @@
+<ion-view title="Photo measurement">
+  <ion-content>
+    <div class="home-cards">
+      <div class="card air-quality">
+        <img class="" ng-src="{{vm.image}}" ng-show="vm.quality !== undefined"/>
+        <div class="air-quality-info {{vm.quality}}" ng-show="vm.quality !== undefined">
+          <h2>{{ 'air_quality.air_quality_is' | translate }}</h2>
+          <h1>{{ 'air_quality.' + vm.quality | translate }}!</h1>
+        </div>
+      </div>
+      <div class="text-center">
+        <button class="button button-calm text-center" ng-click="vm.takeSensorPhoto()">Upload Another Photo</button>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

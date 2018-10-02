@@ -1,0 +1,57 @@
+<ion-view title="{{'sections.air_quality_history' | translate }}" hide-back-button="false" can-swipe-back="true">
+    <ion-nav-bar class="bar-assertive">
+        <ion-nav-back-button class="button-clear">
+            <i class="ion-arrow-left-c"></i> {{ 'general.back' | translate }}
+        </ion-nav-back-button>
+    </ion-nav-bar>
+    <ion-content class="air-quality-history">
+
+        <select ng-options="dateRange as dateRange.name for dateRange in rangeOptions" ng-model="selectedRange"  ng-change="vm.chartChange(selectedRange)">
+        </select>
+
+      <chart id="AQHistoryChart" type="barChart">
+
+      </chart>
+      <hr>
+      <div class="legend-section"> 
+        <div class="row rowspace">
+          <div class="col">
+            <div class="legend-box bad">{{'air_quality.from' | translate}} 3.5</div>
+          </div>
+          <div class="col legend-label">
+            {{'air_quality.bad' | translate}}
+          </div>
+        </div>
+        <div class="row rowspace">
+          <div class="col">
+            <div class="legend-box medium">{{'air_quality.from' | translate}} 2.5 {{'air_quality.to' | translate}} 3.5</div>
+          </div>
+          <div class="col legend-label">
+            {{'air_quality.medium' | translate}}
+          </div>
+        </div>
+        <div class="row rowspace">
+          <div class="col">
+            <div class="legend-box good">{{'air_quality.from' | translate}} 1.5 {{'air_quality.to' | translate}} 2.5</div>
+          </div>
+          <div class="col legend-label">
+            {{'air_quality.good' | translate}}
+          </div>
+        </div>
+        <div class="row rowspace">
+          <div class="col">
+            <div class="legend-box perfect">{{'air_quality.from' | translate}} 0 {{'air_quality.to' | translate}} 1.5</div>
+          </div>
+          <div class="col legend-label">
+            {{'air_quality.very_good' | translate}}
+          </div>
+        </div> 
+        <div class="row">
+          <div class="col" style="font-size:10px; color:#666666; line-height: 11px; border: 1px solid #e4e4e4; padding:3px; margin-top: 5px;">{{'air_quality.disclaimers.disclaimer_quality_history' | translate}}
+          </div>
+        </div>              
+      </div>
+    </ion-content>
+
+</ion-view>
+
