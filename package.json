@@ -4,7 +4,7 @@
     "description": "hackair",
     "dependencies": {
         "@ionic-native/google-analytics": "^4.5.3",
-        "chart.js": "^2.6.0",
+        "chart.js": "^2.9.4",
         "com.telerik.plugins.nativepagetransitions": "git+https://github.com/Telerik-Verified-Plugins/NativePageTransitions.git",
         "cordova-android": "^6.2.3",
         "cordova-fabric-plugin": "~1.1.7",
