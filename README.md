@@ -1,4 +1,8 @@
 # hackAIR mobile app
+
+## Deprecation notice
+This is an old version of the hackAIR mobile app, and is not actively supported.
+
 ## Description
 The hackAIR mobile app (available both in Android and iOS) enables citizens to get convenient access to easy-to-understand air quality information, contribute to measurements by either connecting to a hackAIR compliant open sensor (via Bluetooth or USB), or by taking and uploading sky-depicting photos and receive personalised information on their everyday activities such as traveling, commuting and sports activities.
 The app has been developed using the Ionic Framework v1.
